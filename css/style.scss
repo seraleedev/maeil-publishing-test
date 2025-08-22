@@ -8,16 +8,17 @@ $largeSize: 1.5rem;
 $smallSize: 0.875rem;
 $mediumSize: 1.125rem;
 
+// basic setting
 body {
   font-family: "Noto Sans KR", sans-serif;
   color: $textColor;
 }
+
 .main-container {
   width: 100%;
   height: 100vh;
-  background: aliceblue;
 }
-
+// nav 스타일링
 .nav {
   padding: 8px 24px;
   display: flex;
@@ -70,4 +71,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+}
+// section 스타일링
+.bg-section {
+  width: 100%;
+  height: 100%;
+  background: url("https://github.com/seraleedev/maeil-publishing-test/img/bg_illust.svg")
+    center center/cover no-repeat;
 }

@@ -12,11 +12,20 @@ $mediumSize: 1.125rem;
 body {
   font-family: "Noto Sans KR", sans-serif;
   color: $textColor;
-}
-
-.main-container {
-  width: 100%;
+  display: flex;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: aliceblue;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  width: 1194px;
+  height: 720px;
 }
 // nav 스타일링
 .nav {
@@ -24,6 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   background: white;
+  max-height: 48px;
 }
 
 .nav-flex {
@@ -72,10 +82,49 @@ body {
   top: 0;
   right: 0;
 }
+
 // section 스타일링
 .bg-section {
+  position: relative;
   width: 100%;
   height: 100%;
   background: url("https://seraleedev.github.io/maeil-publishing-test/img/bg_illust.svg")
     center center/cover no-repeat;
+}
+.bg_giftbox {
+  position: absolute;
+  bottom: 21px;
+  right: 101px;
+  width: 240px;
+  height: 180px;
+  background: url("https://seraleedev.github.io/maeil-publishing-test/img/giftbox.svg")
+    center center/contain no-repeat;
+}
+
+.section-top {
+  padding: 0px 32px;
+  justify-content: space-between;
+}
+
+.section-count {
+  margin-top: 21px;
+  padding: 11px 16px;
+  border-radius: 48px;
+  background: white;
+  gap: 13px;
+  p {
+    font-size: $mediumSize;
+  }
+}
+
+.section-time {
+  margin-top: 32px;
+  gap: 8px;
+  p {
+    font-size: $smallSize;
+    line-height: 1.5;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
 }

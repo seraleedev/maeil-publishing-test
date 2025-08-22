@@ -3,55 +3,61 @@
 // variables
 $textColor: #222;
 $redColor: #fc4c4e;
+$primaryColor: #2698e8;
+$boxShadow: 0 0 40px rgba(0, 0, 0, 0.25);
 $basicSize: 1rem;
 $largeSize: 1.5rem;
 $smallSize: 0.875rem;
 $mediumSize: 1.125rem;
+// mixin
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// default style
+.btn {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
 
 // basic setting
 body {
   font-family: "Noto Sans KR", sans-serif;
+  @include flexCenter();
   color: $textColor;
-  display: flex;
   height: 100vh;
-  justify-content: center;
-  align-items: center;
   background: aliceblue;
 }
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .main-container {
   width: 1194px;
   height: 720px;
 }
-// nav 스타일링
+// nav style
 .nav {
   padding: 8px 24px;
-  display: flex;
+  @include flexCenter();
   justify-content: space-between;
   background: white;
   max-height: 48px;
 }
 
 .nav-flex {
-  display: flex;
+  @include flexCenter();
+
   gap: 8px;
-  align-items: center;
+
   button {
+    @include flexCenter();
+    @extend .btn;
     position: relative;
-    display: flex;
     width: 32px;
     height: 32px;
     padding: 4px 0;
-    background: transparent;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: none;
-    cursor: pointer;
     img {
       height: 100%;
     }
@@ -69,9 +75,7 @@ body {
 
 .notice-badge {
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter();
   font-size: 8px;
   font-weight: 700;
   background-color: $redColor;
@@ -83,11 +87,11 @@ body {
   right: 0;
 }
 
-// section 스타일링
+// section style
 .bg-section {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 48px);
   background: url("https://seraleedev.github.io/maeil-publishing-test/img/bg_illust.svg")
     center center/cover no-repeat;
 }
@@ -100,13 +104,15 @@ body {
   background: url("https://seraleedev.github.io/maeil-publishing-test/img/giftbox.svg")
     center center/contain no-repeat;
 }
-
+// section-top
 .section-top {
+  @include flexCenter();
   padding: 0px 32px;
   justify-content: space-between;
 }
 
 .section-count {
+  @include flexCenter();
   margin-top: 21px;
   padding: 11px 16px;
   border-radius: 48px;
@@ -118,6 +124,7 @@ body {
 }
 
 .section-time {
+  @include flexCenter();
   margin-top: 32px;
   gap: 8px;
   p {
@@ -126,5 +133,44 @@ body {
     background: white;
     padding: 8px 16px;
     border-radius: 8px;
+  }
+}
+// section-middle
+// section-bottom
+.section-bottom {
+  @include flexCenter();
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-list-container {
+  @include flexCenter();
+  width: 375px;
+  height: 95px;
+  border-radius: 24px 24px 0 0;
+  background-color: $primaryColor;
+  box-shadow: $boxShadow;
+}
+.footer-list {
+  @include flexCenter();
+  gap: 24px;
+  li {
+    button {
+      @include flexCenter();
+      @extend .btn;
+      flex-direction: column;
+      color: white;
+      gap: 8px;
+      font-size: $basicSize;
+    }
+  }
+}
+
+.footer-icon-box {
+  width: 40px;
+  height: 32px;
+  img {
+    height: 100%;
   }
 }

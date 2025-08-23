@@ -2,76 +2,8 @@
 @use "utils/mixins" as *;
 @use "components/nav";
 @use "components/section";
+@use "components/aside";
+@use "components/article.scss";
+@use "components/footer.scss";
 @use "base/reset";
 @use "base/global";
-
-// variables
-$textColor: #222;
-$redColor: #fc4c4e;
-$primaryColor: #2698e8;
-$badgeColor: #299282;
-$boxShadow1: 0 0 40px rgba(0, 0, 0, 0.25);
-$boxShadow2: 0 4px 30px rgba(0, 0, 0, 0.25);
-$basicSize: 1rem;
-$largeSize: 1.5rem;
-$smallSize: 0.875rem;
-$mediumSize: 1.125rem;
-
-// mixin
-@mixin flexCenter() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// default style
-@mixin btnStyle() {
-  background: transparent;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-
-.main-container {
-  width: 1194px;
-  height: 720px;
-}
-
-// section-bottom
-.section-bottom {
-  @include flexCenter();
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-list-container {
-  @include flexCenter();
-  width: 375px;
-  height: 95px;
-  border-radius: 24px 24px 0 0;
-  background-color: $primaryColor;
-  box-shadow: $boxShadow1;
-}
-.footer-list {
-  @include flexCenter();
-  gap: 24px;
-  li {
-    button {
-      @include flexCenter();
-      @include btnStyle();
-      flex-direction: column;
-      color: white;
-      gap: 8px;
-      font-size: $basicSize;
-    }
-  }
-}
-
-.footer-icon-box {
-  width: 40px;
-  height: 32px;
-  img {
-    height: 100%;
-  }
-}

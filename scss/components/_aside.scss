@@ -1,5 +1,5 @@
 @use "../utils/mixins.scss" as m;
-@use "../utils/variables.scss" as v;
+@use "../utils/variables.scss" as *;
 
 // aside(section-top)
 .section {
@@ -16,14 +16,14 @@
     background: white;
     gap: 13px;
     &--text {
-      font-size: v.$font-size-md;
+      font-size: $font-size-md;
     }
   }
 
   &__time {
     margin-top: 32px;
     &--text {
-      font-size: v.$font-size-sm;
+      font-size: $font-size-sm;
       line-height: 1.5;
       background: white;
       padding: 8px 16px;

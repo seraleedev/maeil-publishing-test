@@ -1,0 +1,43 @@
+@use "../utils/mixins.scss" as m;
+@use "../utils/variables.scss" as *;
+
+// footer(section-bottom)
+.section {
+  &__bottom {
+    @include m.flex-center();
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    &--container {
+      @include m.flex-center();
+      width: 375px;
+      height: 95px;
+      border-radius: 24px 24px 0 0;
+      background-color: $color-primary;
+      box-shadow: $shadow-blur-40;
+    }
+
+    &--list {
+      @include m.flex-center();
+      gap: 24px;
+      .item {
+        &--btn {
+          @include m.flex-center();
+          @include m.btn-default();
+          flex-direction: column;
+          color: white;
+          gap: 8px;
+          font-size: $font-size-basic;
+        }
+
+        &--icon {
+          width: 40px;
+          height: 32px;
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

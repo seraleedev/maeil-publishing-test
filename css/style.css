@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+.main-container {
+  width: 1194px;
+  height: 720px;
+}
+
 .icon {
   width: 32px;
   height: 32px;
@@ -58,6 +63,21 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.section__bg {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 48px);
+  background: url("https://seraleedev.github.io/maeil-publishing-test/img/bg_illust.svg") center center/cover no-repeat;
+}
+.section__bg--giftbox {
+  position: absolute;
+  bottom: 21px;
+  right: 101px;
+  width: 240px;
+  height: 180px;
+  background: url("https://seraleedev.github.io/maeil-publishing-test/img/giftbox.svg") center center/contain no-repeat;
 }
 
 .section__top {
@@ -193,19 +213,49 @@
   border-radius: 50px;
 }
 
-.section__bg {
-  position: relative;
-  width: 100%;
-  height: calc(100% - 48px);
-  background: url("https://seraleedev.github.io/maeil-publishing-test/img/bg_illust.svg") center center/cover no-repeat;
-}
-.section__bg--giftbox {
+.section__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 21px;
-  right: 101px;
-  width: 240px;
-  height: 180px;
-  background: url("https://seraleedev.github.io/maeil-publishing-test/img/giftbox.svg") center center/contain no-repeat;
+  bottom: 0;
+  width: 100%;
+}
+.section__bottom--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  height: 95px;
+  border-radius: 24px 24px 0 0;
+  background-color: #2698e8;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
+}
+.section__bottom--list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.section__bottom--list .item--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  color: white;
+  gap: 8px;
+  font-size: 1rem;
+}
+.section__bottom--list .item--icon {
+  width: 40px;
+  height: 32px;
+}
+.section__bottom--list .item--icon img {
+  height: 100%;
 }
 
 html,
@@ -352,59 +402,6 @@ body {
   color: 1rem;
   height: 100vh;
   background: aliceblue;
-}
-
-.main-container {
-  width: 1194px;
-  height: 720px;
-}
-
-.section-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-list-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 375px;
-  height: 95px;
-  border-radius: 24px 24px 0 0;
-  background-color: #2698e8;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
-}
-
-.footer-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-.footer-list li button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  flex-direction: column;
-  color: white;
-  gap: 8px;
-  font-size: 1rem;
-}
-
-.footer-icon-box {
-  width: 40px;
-  height: 32px;
-}
-.footer-icon-box img {
-  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 @use "../utils/mixins" as m;
-@use "../utils/variables" as v;
+@use "../utils/variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
 // basic setting
@@ -12,7 +12,7 @@ html {
 
 body {
   @include m.flex-center();
-  color: v.$font-size-basic;
+  color: $font-size-basic;
   height: 100vh;
   background: aliceblue;
 }

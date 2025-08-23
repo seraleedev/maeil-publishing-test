@@ -1,5 +1,5 @@
 @use "../utils/mixins.scss" as m;
-@use "../utils/variables.scss" as v;
+@use "../utils/variables.scss" as *;
 
 // nav style
 .nav {
@@ -11,7 +11,7 @@
 
   &__name {
     font-weight: 700;
-    font-size: v.$font-size-basic;
+    font-size: $font-size-basic;
   }
   &__btn {
     @include m.flex-center();
@@ -38,7 +38,7 @@
   height: 12px;
 
   &--notice {
-    background-color: v.$color-red;
+    background-color: $color-red;
     position: absolute;
     top: 0;
     right: 0;

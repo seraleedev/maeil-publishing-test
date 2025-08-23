@@ -1,24 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-.btn, .footer-list li button, .large-btn, .nav-flex button {
-  background: transparent;
-  outline: none;
-  border: none;
-  cursor: pointer;
+.icon {
+  width: 32px;
+  height: 32px;
 }
 
-body {
-  font-family: "Noto Sans KR", sans-serif;
+.group {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #222;
-  height: 100vh;
-  background: aliceblue;
-}
-
-.main-container {
-  width: 1194px;
-  height: 720px;
+  gap: 8px;
 }
 
 .nav {
@@ -30,37 +20,28 @@ body {
   background: white;
   max-height: 48px;
 }
-
-.nav-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+.nav__name {
+  font-weight: 700;
+  font-size: 1rem;
 }
-.nav-flex button {
+.nav__btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
   position: relative;
   width: 32px;
   height: 32px;
   padding: 4px 0;
 }
-.nav-flex button img {
+.nav__btn .icon {
   height: 100%;
 }
 
-.nav-logo-img {
-  width: 32px;
-  height: 32px;
-}
-
-.nav-logo-name {
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.notice-badge {
+.badge {
   color: white;
   display: flex;
   justify-content: center;
@@ -68,61 +49,38 @@ body {
   font-size: 8px;
   vertical-align: middle;
   font-weight: 700;
-  background-color: #fc4c4e;
   border-radius: 100%;
   width: 12px;
   height: 12px;
+}
+.badge--notice {
+  background-color: #fc4c4e;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.bg-section {
-  position: relative;
-  width: 100%;
-  height: calc(100% - 48px);
-  background: url("https://seraleedev.github.io/maeil-publishing-test/img/bg_illust.svg") center center/cover no-repeat;
-}
-
-.bg_giftbox {
-  position: absolute;
-  bottom: 21px;
-  right: 101px;
-  width: 240px;
-  height: 180px;
-  background: url("https://seraleedev.github.io/maeil-publishing-test/img/giftbox.svg") center center/contain no-repeat;
-}
-
-.section-top {
+.section__top {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px 32px;
   justify-content: space-between;
 }
-
-.section-count {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.section__count {
   margin-top: 21px;
   padding: 11px 16px;
   border-radius: 48px;
   background: white;
   gap: 13px;
 }
-.section-count p {
+.section__count--text {
   font-size: 1.125rem;
 }
-
-.section-time {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.section__time {
   margin-top: 32px;
-  gap: 8px;
 }
-.section-time p {
+.section__time--text {
   font-size: 0.875rem;
   line-height: 1.5;
   background: white;
@@ -130,13 +88,78 @@ body {
   border-radius: 8px;
 }
 
-.section-middle {
+.section__middle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.section__charactor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.section__charactor img,
+.section__charactor .kangchi-name {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.section__charactor .floor {
+  bottom: 0;
+}
+.section__charactor .kangchi {
+  bottom: 20%;
+}
+.section__charactor .kangchi-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 50px;
+  z-index: 10;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.5);
+}
 
-.large-btn {
+.speech-bubble {
+  margin-top: 10px;
+  position: relative;
+  background: white;
+  max-width: 280px;
+  border-radius: 4px;
+}
+.speech-bubble--text {
+  padding: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.speech-bubble :after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top-color: white;
+  border-bottom: 0;
+  margin-left: -8px;
+  margin-bottom: -8px;
+}
+
+.btn--lg {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
   position: relative;
   width: 176px;
   height: 176px;
@@ -145,16 +168,15 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   gap: 8px;
 }
-.large-btn img {
+.btn--lg img {
   width: 64px;
   height: 64px;
 }
-.large-btn h2 {
+.btn--lg--text {
   font-size: 1.5rem;
   font-weight: 700;
 }
-
-.large-btn-badge {
+.btn--lg .badge {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,65 +193,170 @@ body {
   border-radius: 50px;
 }
 
-.section-greeting {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+.section__bg {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: calc(100% - 48px);
+  background: url("https://seraleedev.github.io/maeil-publishing-test/img/bg_illust.svg") center center/cover no-repeat;
 }
-.section-greeting img,
-.section-greeting .kangchi-name {
+.section__bg--giftbox {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  bottom: 21px;
+  right: 101px;
+  width: 240px;
+  height: 180px;
+  background: url("https://seraleedev.github.io/maeil-publishing-test/img/giftbox.svg") center center/contain no-repeat;
 }
-.section-greeting .floor {
-  bottom: 0;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-.section-greeting .kangchi {
-  bottom: 20%;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-.section-greeting .kangchi-name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 50px;
-  z-index: 10;
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  color: white;
-  font-weight: 700;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.5);
+
+body {
+  line-height: 1;
 }
-.section-greeting .charactor-bubble {
-  margin-top: 10px;
-  position: relative;
-  background: white;
-  max-width: 280px;
-  border-radius: 4px;
+
+ol,
+ul {
+  list-style: none;
 }
-.section-greeting .charactor-bubble p {
-  padding: 8px;
-  font-size: 1rem;
-  line-height: 1.5;
+
+blockquote,
+q {
+  quotes: none;
 }
-.section-greeting .charactor-bubble :after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-  border-top-color: white;
-  border-bottom: 0;
-  margin-left: -8px;
-  margin-bottom: -8px;
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+body,
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.4px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: 1rem;
+  height: 100vh;
+  background: aliceblue;
+}
+
+.main-container {
+  width: 1194px;
+  height: 720px;
 }
 
 .section-bottom {
@@ -262,6 +389,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
   flex-direction: column;
   color: white;
   gap: 8px;

@@ -12,52 +12,40 @@
       <!--nav-->
       <header>
         <nav class="nav">
-          <h1 class="nav-flex">
-            <img class="nav-logo-img" src="img/Logo.svg" alt="독도 로고" />
-            <p class="nav-logo-name">김학생</p>
+          <h1 class="group">
+            <img class="icon" src="img/Logo.svg" alt="독도 로고" />
+            <p class="nav__name">김학생</p>
           </h1>
-          <div class="nav-flex">
-            <button>
-              <img
-                class="nav-logo-img"
-                src="img/icon-note.svg"
-                alt="icon-note"
-              />
-              <div class="notice-badge">3</div>
+          <div class="group">
+            <button class="nav__btn">
+              <img class="icon" src="img/icon-note.svg" alt="icon-note" />
+              <div class="badge badge--notice">3</div>
             </button>
-            <button>
-              <img
-                class="nav-logo-img"
-                src="img/icon-notice.svg"
-                alt="icon-notice"
-              />
-              <div class="notice-badge">3</div>
+            <button class="nav__btn">
+              <img class="icon" src="img/icon-notice.svg" alt="icon-notice" />
+              <div class="badge badge--notice">3</div>
             </button>
-            <button>
-              <img
-                class="nav-logo-img"
-                src="img/icon-alert.svg"
-                alt="icon-alert"
-              />
+            <button class="nav__btn">
+              <img class="icon" src="img/icon-alert.svg" alt="icon-alert" />
             </button>
           </div>
         </nav>
       </header>
 
       <!--contents-->
-      <section class="bg-section">
-        <aside class="section-top">
-          <div class="section-count">
+      <section class="section__bg">
+        <aside class="section__top">
+          <div class="section__count group">
             <img
               src="img/icon-flower.svg"
               alt="icon-flower"
               width="22px"
               height="22px"
             />
-            <p>3,670</p>
+            <p class="section__count--text">3,670</p>
           </div>
-          <div class="section-time">
-            <p>
+          <div class="section__time group">
+            <p class="section__time--text">
               3일 7시간<br />
               남았어요!
             </p>
@@ -70,28 +58,31 @@
           </div>
         </aside>
 
-        <article class="section-middle">
-          <button class="large-btn">
+        <article class="section__middle">
+          <button class="btn--lg">
             <img src="img/icon-book.svg" alt="icon-book" />
-            <h2>책 읽기</h2>
-            <p class="large-btn-badge">2</p>
+            <h2 class="btn--lg--text">책 읽기</h2>
+            <p class="btn--lg badge">2</p>
           </button>
-          <div class="section-greeting">
-            <figure class="charactor-bubble">
-              <p>진강치님 반가워요~ 강치와 함께 독도 탐험을 시작해 보세요!</p>
+          <div class="section__charactor">
+            <figure class="speech-bubble">
+              <p class="speech-bubble--text">
+                진강치님 반가워요~ 강치와 함께 독도 탐험을 시작해 보세요!
+              </p>
             </figure>
 
             <p class="kangchi-name">김강치강치</p>
             <img src="img/floor.svg" alt="floor-illust" class="floor" />
             <img src="img/kangchi.svg" alt="kangchi-illust" class="kangchi" />
           </div>
-          <button class="large-btn">
+          <button class="btn--lg">
             <img src="img/icon-pen.svg" alt="icon-pen" />
-            <h2>글쓰기</h2>
-            <p class="large-btn-badge">3</p>
+            <h2 class="btn--lg--text">글쓰기</h2>
+            <p class="btn--lg badge">3</p>
           </button>
         </article>
 
+        <!--footer-->
         <footer class="section-bottom">
           <div class="footer-list-container">
             <ul class="footer-list">
@@ -125,7 +116,7 @@
             </ul>
           </div>
         </footer>
-        <div class="bg_giftbox"></div>
+        <div class="section__bg--giftbox"></div>
       </section>
     </div>
   </body>

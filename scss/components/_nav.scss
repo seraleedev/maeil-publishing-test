@@ -1,0 +1,46 @@
+@use "../utils/mixins.scss" as m;
+@use "../utils/variables.scss" as v;
+
+// nav style
+.nav {
+  padding: 8px 24px;
+  @include m.flex-center();
+  justify-content: space-between;
+  background: white;
+  max-height: 48px;
+
+  &__name {
+    font-weight: 700;
+    font-size: v.$font-size-basic;
+  }
+  &__btn {
+    @include m.flex-center();
+    @include m.btn-default();
+
+    position: relative;
+    width: 32px;
+    height: 32px;
+    padding: 4px 0;
+    .icon {
+      height: 100%;
+    }
+  }
+}
+
+.badge {
+  color: white;
+  @include m.flex-center();
+  font-size: 8px;
+  vertical-align: middle;
+  font-weight: 700;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+
+  &--notice {
+    background-color: v.$color-red;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

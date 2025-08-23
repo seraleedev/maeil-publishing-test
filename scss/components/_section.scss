@@ -1,0 +1,22 @@
+@use "aside.scss";
+@use "article.scss";
+// section style
+.section {
+  &__bg {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 48px);
+    background: url("https://seraleedev.github.io/maeil-publishing-test/img/bg_illust.svg")
+      center center/cover no-repeat;
+
+    &--giftbox {
+      position: absolute;
+      bottom: 21px;
+      right: 101px;
+      width: 240px;
+      height: 180px;
+      background: url("https://seraleedev.github.io/maeil-publishing-test/img/giftbox.svg")
+        center center/contain no-repeat;
+    }
+  }
+}

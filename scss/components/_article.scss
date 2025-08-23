@@ -68,37 +68,36 @@
 }
 
 .btn {
-  &--lg {
-    @include m.btn-default();
-    position: relative;
-    width: 176px;
-    height: 176px;
-    background: white;
-    border-radius: 32px;
-    box-shadow: $shadow-blur-30;
-    gap: 8px;
-    img {
-      width: 64px;
-      height: 64px;
-    }
-    &--text {
-      font-size: $font-size-lg;
-      font-weight: 700;
-    }
+  @include m.btn-default();
+  position: relative;
+  width: 176px;
+  height: 176px;
+  background: white;
+  border-radius: 32px;
+  box-shadow: $shadow-blur-30;
+  gap: 8px;
+  img {
+    width: 64px;
+    height: 64px;
+  }
 
-    .badge {
-      @include m.flex-center();
-      width: 64px;
-      height: 40px;
-      position: absolute;
-      bottom: -10%;
-      left: 50%;
-      transform: translate(-50%);
-      background: $color-green;
-      font-weight: 700;
-      color: white;
-      font-size: $font-size-lg;
-      border-radius: 50px;
-    }
+  &__text {
+    font-size: $font-size-lg;
+    font-weight: 700;
+  }
+  &__badge {
+    @include m.flex-center();
+    width: 64px;
+    height: 40px;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%);
+    background: $color-green;
+    font-weight: 700;
+    color: white;
+    font-size: $font-size-lg;
+    line-height: 1;
+    border-radius: 50px;
   }
 }

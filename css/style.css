@@ -175,7 +175,7 @@
   margin-bottom: -8px;
 }
 
-.btn--lg {
+.btn {
   background: transparent;
   outline: none;
   border: none;
@@ -188,15 +188,15 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   gap: 8px;
 }
-.btn--lg img {
+.btn img {
   width: 64px;
   height: 64px;
 }
-.btn--lg--text {
+.btn__text {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.btn--lg .badge {
+.btn__badge {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,6 +210,7 @@
   font-weight: 700;
   color: white;
   font-size: 1.5rem;
+  line-height: 1;
   border-radius: 50px;
 }
 
@@ -231,13 +232,14 @@
   background-color: #2698e8;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
 }
-.section__bottom--list {
+
+.footer-list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
 }
-.section__bottom--list .item--btn {
+.footer-list--btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,11 +252,11 @@
   gap: 8px;
   font-size: 1rem;
 }
-.section__bottom--list .item--icon {
+.footer-list--icon {
   width: 40px;
   height: 32px;
 }
-.section__bottom--list .item--icon img {
+.footer-list--icon img {
   height: 100%;
 }
 

@@ -113,7 +113,8 @@
   justify-content: center;
   align-items: center;
 }
-.section__charactor {
+
+.charactor {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,45 +124,24 @@
   width: 400px;
   height: 400px;
 }
-.section__charactor img,
-.section__charactor .kangchi-name {
+.charactor img {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
 }
-.section__charactor .floor {
-  bottom: 0;
-}
-.section__charactor .kangchi {
-  bottom: 20%;
-}
-.section__charactor .kangchi-name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 50px;
-  z-index: 10;
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  color: white;
-  font-weight: 700;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.speech-bubble {
+.charactor .charactor-bubble {
   margin-top: 10px;
   position: relative;
   background: white;
   max-width: 280px;
   border-radius: 4px;
 }
-.speech-bubble--text {
+.charactor .charactor-bubble--text {
   padding: 8px;
   font-size: 1rem;
   line-height: 1.5;
 }
-.speech-bubble :after {
+.charactor .charactor-bubble :after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -173,6 +153,28 @@
   border-bottom: 0;
   margin-left: -8px;
   margin-bottom: -8px;
+}
+.charactor--floor {
+  bottom: 0;
+}
+.charactor--illust {
+  bottom: 20%;
+}
+.charactor--name {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 50px;
+  z-index: 10;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .btn {

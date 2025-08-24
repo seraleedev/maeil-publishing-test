@@ -6,64 +6,68 @@
   &__middle {
     @include m.flex-center();
   }
-
-  &__charactor {
-    @include m.flex-center();
-    justify-content: flex-start;
-    flex-direction: column;
-    position: relative;
-    width: 400px;
-    height: 400px;
-    img,
-    .kangchi-name {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%);
-    }
-    .floor {
-      bottom: 0;
-    }
-    .kangchi {
-      bottom: 20%;
-    }
-    .kangchi-name {
-      @include m.flex-center();
-      bottom: 50px;
-      z-index: 10;
-      padding: 8px 16px;
-      font-size: $font-size-sm;
-      color: white;
-      font-weight: 700;
-      border-radius: 4px;
-      background: rgba(0, 0, 0, 0.5);
-    }
-  }
 }
 
-.speech-bubble {
-  margin-top: 10px;
+.charactor {
+  @include m.flex-center();
+  justify-content: flex-start;
+  flex-direction: column;
   position: relative;
-  background: white;
-  max-width: 280px;
-  border-radius: 4px;
-  &--text {
-    padding: 8px;
-    font-size: $font-size-basic;
-    line-height: 1.5;
+  width: 400px;
+  height: 400px;
+
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
   }
 
-  :after {
-    content: "";
-    position: absolute;
+  .charactor-bubble {
+    margin-top: 10px;
+    position: relative;
+    background: white;
+    max-width: 280px;
+    border-radius: 4px;
+    &--text {
+      padding: 8px;
+      font-size: $font-size-basic;
+      line-height: 1.5;
+    }
+
+    :after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-top-color: white;
+      border-bottom: 0;
+      margin-left: -8px;
+      margin-bottom: -8px;
+    }
+  }
+
+  &--floor {
     bottom: 0;
+  }
+  &--illust {
+    bottom: 20%;
+  }
+  &--name {
+    position: absolute;
     left: 50%;
-    width: 0;
-    height: 0;
-    border: 8px solid transparent;
-    border-top-color: white;
-    border-bottom: 0;
-    margin-left: -8px;
-    margin-bottom: -8px;
+    transform: translate(-50%);
+    @include m.flex-center();
+    bottom: 50px;
+    z-index: 10;
+    padding: 8px 16px;
+    font-size: $font-size-sm;
+    color: white;
+    font-weight: 700;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.5);
   }
 }
 
